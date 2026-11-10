@@ -1,0 +1,93 @@
+{
+  "dataset": "rate_limiter_handbook_v1",
+  "license": "MIT",
+  "notes": "Human-annotated keyword retrieval set. evidence_must_contain checks localization in hit bodies. expect_unsupported marks true negatives. This is NOT an LLM answer-quality eval.",
+  "questions": [
+    {
+      "id": "rl-q1",
+      "type": "positive",
+      "question": "How does a token bucket refill and what is capacity b?",
+      "expected_headings": ["Token Bucket Basics"],
+      "evidence_must_contain": ["TOKEN_BUCKET_REFILL_ANCHOR"]
+    },
+    {
+      "id": "rl-q2",
+      "type": "positive",
+      "question": "When is a sliding window counter preferable to a fixed window?",
+      "expected_headings": ["Sliding Window Counter"],
+      "evidence_must_contain": ["SLIDING_WINDOW_ANCHOR_42"]
+    },
+    {
+      "id": "rl-q3",
+      "type": "cross_chapter",
+      "question": "Distributed limits under partition and token bucket parameters",
+      "expected_headings": ["Distributed Limits"],
+      "evidence_must_contain": ["DISTRIBUTED_LIMIT_PARTITION_NOTE"]
+    },
+    {
+      "id": "rl-q4",
+      "type": "positive",
+      "question": "full jitter retry formula after rate limiting",
+      "expected_headings": ["Client Retry Policy"],
+      "evidence_must_contain": ["FULL_JITTER_RETRY_RULE"]
+    },
+    {
+      "id": "rl-q5",
+      "type": "positive",
+      "question": "reject ratio alert threshold observability",
+      "expected_headings": ["Observability"],
+      "evidence_must_contain": ["REJECT_RATIO_ALERT_5PCT"]
+    },
+    {
+      "id": "rl-q6",
+      "type": "positive",
+      "question": "anti-pattern retrying HTTP 429 with zero jitter",
+      "expected_headings": ["Anti-Patterns"],
+      "evidence_must_contain": ["ANTIPATTERN_NO_JITTER_429"]
+    },
+    {
+      "id": "rl-q7",
+      "type": "bilingual",
+      "question": "令牌桶 补充 容量",
+      "expected_headings": ["Token Bucket Basics"],
+      "evidence_must_contain": ["令牌桶以速率"]
+    },
+    {
+      "id": "rl-q8",
+      "type": "cross_chapter",
+      "question": "同步延迟 分布式限流 桶参数",
+      "expected_headings": ["Distributed Limits"],
+      "evidence_must_contain": ["同步延迟"]
+    },
+    {
+      "id": "rl-q9",
+      "type": "no_answer",
+      "question": "quantum entanglement calendar widget xerxes",
+      "expect_unsupported": true,
+      "expected_headings": [],
+      "evidence_must_contain": []
+    },
+    {
+      "id": "rl-q10",
+      "type": "no_answer",
+      "question": "blockchain NFT mint pricing oracle",
+      "expect_unsupported": true,
+      "expected_headings": [],
+      "evidence_must_contain": []
+    },
+    {
+      "id": "rl-q11",
+      "type": "negative",
+      "question": "token bucket silent drop without metrics is recommended",
+      "expected_headings": ["Anti-Patterns"],
+      "evidence_must_contain": ["Silent drop without metrics"]
+    },
+    {
+      "id": "rl-q12",
+      "type": "positive",
+      "question": "central counter accuracy versus local approximation latency",
+      "expected_headings": ["Distributed Limits"],
+      "evidence_must_contain": ["Central counters are accurate"]
+    }
+  ]
+}

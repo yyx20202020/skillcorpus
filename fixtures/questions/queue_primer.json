@@ -1,0 +1,62 @@
+{
+  "dataset": "queue_primer_v2",
+  "license": "MIT",
+  "notes": "Updated annotations: success requires evidence_must_contain in hit bodies. Title-only shortcuts are not scored as citation support.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "positive",
+      "question": "What is a bounded queue and why use backpressure?",
+      "expected_headings": ["Why Bound the Queue"],
+      "evidence_must_contain": ["bounded queue"]
+    },
+    {
+      "id": "q2",
+      "type": "positive",
+      "question": "When should I drop-old versus block the producer?",
+      "expected_headings": ["Drop vs Block"],
+      "evidence_must_contain": ["Drop-old"]
+    },
+    {
+      "id": "q3",
+      "type": "positive",
+      "question": "How does BoundedQueue.push signal backpressure in code?",
+      "expected_headings": ["Code Sketch"],
+      "evidence_must_contain": ["return False  # backpressure signal"]
+    },
+    {
+      "id": "q4",
+      "type": "positive",
+      "question": "What queue_depth ratio should trigger an alert?",
+      "expected_headings": ["Measuring Pressure"],
+      "evidence_must_contain": ["queue_depth / capacity"]
+    },
+    {
+      "id": "q5",
+      "type": "positive",
+      "question": "Name anti-patterns for unbounded buffers",
+      "expected_headings": ["Anti-Patterns"],
+      "evidence_must_contain": ["Unlimited `list.append`"]
+    },
+    {
+      "id": "q6",
+      "type": "bilingual",
+      "question": "有界队列 背压",
+      "expected_headings": ["Why Bound the Queue"],
+      "evidence_must_contain": ["有界队列"]
+    },
+    {
+      "id": "q7",
+      "type": "no_answer",
+      "question": "quantum entanglement unicorn xerxes",
+      "expect_unsupported": true
+    },
+    {
+      "id": "q8",
+      "type": "positive",
+      "question": "capacity must be >= 1 ValueError",
+      "expected_headings": ["Code Sketch"],
+      "evidence_must_contain": ["capacity must be >= 1"]
+    }
+  ]
+}

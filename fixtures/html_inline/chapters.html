@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Inline Markup Fixture</title></head>
+<body>
+  <h1>Chapter <span>1</span>: Syntax Continuity</h1>
+  <p>This heading uses an inline <span>span</span> around the chapter number.
+     Extraction must keep <code>Chapter 1</code> on one logical line.</p>
+  <pre><code>if enabled:
+    <span>print</span>("ok")
+</code></pre>
+  <h1>Chapter <span>2</span>: hyper<span>text</span></h1>
+  <p>Word hypertext must remain continuous despite inline tags.</p>
+</body>
+</html>
